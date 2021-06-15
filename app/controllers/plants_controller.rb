@@ -10,7 +10,7 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
-    authorize @pet
+    authorize @plant
   end
 
   def create
@@ -41,7 +41,7 @@ class PlantsController < ApplicationController
 
   def set_task
     @plant = Plant.find(params[:id])
-    authorize @pet
+    authorize @plant
   end
 
   def plant_params
