@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   #main-title {
     text-align: center;
     padding-top: 12%;
@@ -14,7 +14,7 @@
   }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 800px) {
   #main-title {
     text-align: center;
     padding-top: 6%;
