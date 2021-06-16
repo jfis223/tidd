@@ -1,5 +1,7 @@
 class Pet < ApplicationRecord
   belongs_to :user
+  has_many :categories, through: :pet_categories
+  has_many :pet_notifications, through: :pet_categories
   TYPE = %w[cat dog]
   TYPE_FILTER = TYPE.map do |type|
                         [type.capitalize, type]
