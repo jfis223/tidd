@@ -5,19 +5,15 @@ $flowerpot-color2: #d1bb94;
 
 @media only screen and (max-width: 600px) {
   .plant-wrap {
-    display: block;
-    position: fixed;
-    top: 62%;
-    left: 20%;
+    display: inline-block;
+    position: relative;
 }
 }
 
 @media only screen and (min-width: 400px) {
-.plant-wrap {
-  display: block;
-  position: fixed;
-  top: 58%;
-  left: 40%;
+  .plant-wrap {
+    display: inline-block;
+    position: relative;
 }
 }
 
