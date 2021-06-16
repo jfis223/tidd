@@ -7,6 +7,11 @@
     text-align: center;
     padding-top: 12%;
   }
+
+  #main-btn {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
 }
 
 @media only screen and (min-width: 400px) {
@@ -14,13 +19,24 @@
     text-align: center;
     padding-top: 6%;
   }
+
+  #main-btn {
+    margin-right: 42%;
+    margin-left: 42%;
+  }
 }
 
 #main-btn {
   text-align: center;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: #446c0187;
+  color: #ffffff;
+}
+
+#main-btn:hover {
+  background-color: #809C53;
 }
 
 #main-banner {
@@ -32,4 +48,8 @@
   #main-banner {
     height: 850px;
   }
+}
+
+.cat-and-plant {
+  margin-top: 140px;
 }
