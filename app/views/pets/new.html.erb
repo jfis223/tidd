@@ -7,12 +7,12 @@
 <div class="input">
 <%= simple_form_for (@pet) do |p| %>
 <%= p.input :name, placeholder: 'Name' %>
+<%= p.input :species, collection: Pet::SPECIES_FILTER %>
 <%= p.input :breed, placeholder: 'Breed' %>
 <%= p.input :birthdate, as: :date, placeholder: 'Birthdate' %>
-<%= p.input :weight, as: :integer, placeholder: 'Location' %>
+<%= p.input :weight, as: :integer, placeholder: 'Weight' %>
 <%= p.input :location, placeholder: 'Location' %>
-<%= p.input :type, collection: Pet::TYPE_FILTER %>
-<%= p.input :image, as: :file, required: false %>
+<%# p.input :image, as: :file, required: false %>
 </div>
 <div class="form-actions">
   <div class="row justify-content-center">

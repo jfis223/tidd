@@ -1,2 +1,4 @@
-<h1>PetCategories#new</h1>
-<p>Find me in app/views/pet_categories/new.html.erb</p>
+<%= simple_form_for [@pet, @pet_category] do |f| %>
+<%= f.association :category, collection: Category.all %>
+<%= f.submit %>
+<% end %>
