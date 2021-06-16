@@ -30,7 +30,7 @@ a {
 
 .nav__wrapper {
   position: fixed;
-  top: 72px;
+  top: 170px;
   right: 0;
   width: Max(220px, 20%);
   bottom: 0;
@@ -41,6 +41,7 @@ a {
   background-color: #446C01;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   display: block;
+  height: 180px;
 
   &.active {
     visibility: visible;
@@ -63,8 +64,17 @@ a {
   color: #FFFFFF;
   border: #FFFFFF;
   font-size: 25px;
+  z-index: 1000;
+
 
 &:hover {
   text-decoration: none;
+}
+}
+
+.btn-green {
+  background-color: #446C01;
+  &:hover {
+  background-color: #446C01
 }
 }
