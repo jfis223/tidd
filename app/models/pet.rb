@@ -2,10 +2,11 @@ class Pet < ApplicationRecord
   belongs_to :user
   has_many :categories, through: :pet_categories
   has_many :pet_notifications, through: :pet_categories
-  TYPE = %w[cat dog]
-  TYPE_FILTER = TYPE.map do |type|
-                       [type.capitalize, type]
-                         end
+  
+  SPECIES = %w[cat dog]
+  SPECIES_FILTER = SPECIES.map do |species|
+                        [species.capitalize, species]
+                      end
   DOG_BREED = []
 
   dog_url = 'https://api.thedogapi.com/v1/breeds'
@@ -29,7 +30,7 @@ class Pet < ApplicationRecord
 
   validates :name, presence: true
   validates :breed, inclusion: { in: DOG_BREED || CAT_BREED }
-  validates :type, inclusion: { in: TYPE }
+  validates :species, inclusion: { in: SPECIES }
   validates :birthdate, presence: true
   has_one_attached :image
 end
