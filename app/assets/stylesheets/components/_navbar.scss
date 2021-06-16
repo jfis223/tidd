@@ -31,7 +31,7 @@ a.brand:hover {
 }
 
 .site-header {
-  position: sticky;
+  position: relative;
   background-color: #809C53;
   opacity: 100%;
   box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
@@ -49,7 +49,7 @@ a.brand:hover {
 }
 
 .nav__wrapper {
-  position: fixed;
+  position: absolute;
   top: 90px;
   right: 0;
   width: Max(220px, 20%);

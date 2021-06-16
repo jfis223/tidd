@@ -7,8 +7,9 @@
 <div class="input">
 <%= simple_form_for (@pet) do |p| %>
 <%= p.input :name, placeholder: 'Name' %>
-<%= p.input :species, collection: Pet::SPECIES_FILTER %>
-<%= p.input :breed, placeholder: 'Breed' %>
+<%= p.input :type, collection: Pet::SPECIES_FILTER, selected: 'Cat' %>
+<%= p.input :breed, placeholder: 'Breed', collection: Pet::DOG_BREED, input_html: { id: :dog_breeds, class: "pet_selection" } %>
+<%= p.input :breed, placeholder: 'Breed', label: false, collection: Pet::CAT_BREED, input_html: { id: :cat_breeds } %>
 <%= p.input :birthdate, as: :date, placeholder: 'Birthdate' %>
 <%= p.input :weight, as: :integer, placeholder: 'Weight' %>
 <%= p.input :location, placeholder: 'Location' %>
@@ -17,7 +18,7 @@
 <div class="form-actions">
   <div class="row justify-content-center">
     <div class="col-2 d-flex justify-content-center">
-      <%= p.submit 'Add a pet 🐶', class: "button-form" %>
+      <%= p.submit 'Add this pet 🐶', class: "button-form" %>
     </div>
 </div>
 
