@@ -1,0 +1,35 @@
+.typed-cursor {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  #main-title {
+    text-align: center;
+    padding-top: 12%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  #main-title {
+    text-align: center;
+    padding-top: 6%;
+  }
+}
+
+#main-btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#main-banner {
+    height: 600px;
+  }
+
+
+@media only screen and (min-width: 1800px) {
+  #main-banner {
+    height: 850px;
+  }
+}
