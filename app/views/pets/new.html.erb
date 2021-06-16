@@ -1,1 +1,28 @@
+<div class="container justify-center">
+  <div class="form">
+  <div class="d-flex justify-content-center p-4">
+    <h2>New Pet</h2>
+  </div>
+
+<div class="input">
+<%= simple_form_for (@pet) do |p| %>
+<%= p.input :name, placeholder: 'Name' %>
+<%= p.input :breed, placeholder: 'Breed' %>
+<%= p.input :birthdate, as: :date, placeholder: 'Birthdate' %>
+<%= p.input :weight, as: :integer, placeholder: 'Location' %>
+<%= p.input :location, placeholder: 'Location' %>
+<%= p.input :type, collection: Pet::TYPE_FILTER %>
+<%= p.input :image, as: :file, required: false %>
+</div>
+<div class="form-actions">
+  <div class="row justify-content-center">
+    <div class="col-2 d-flex justify-content-center">
+      <%= p.submit 'Add a pet 🐶', class: "button-form" %>
+    </div>
+</div>
+
+<% end %>
+</div>
+</div>
+</div>
 
