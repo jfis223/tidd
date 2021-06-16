@@ -10,16 +10,18 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
+    authorize @plant
   end
 
   def create
     @plant = Plant.new(plant_params)
-
+    authorize @pet
     if @plant.save
       redirect_to @plant, notice: 'your plant has been added!'
     else
       render :new
     end
+    authorize @plant
   end
 
   def edit
@@ -39,6 +41,7 @@ class PlantsController < ApplicationController
 
   def set_task
     @plant = Plant.find(params[:id])
+    authorize @plant
   end
 
   def plant_params

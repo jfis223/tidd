@@ -1,0 +1,39 @@
+.form {
+  border: 1px solid #CFCFCF;
+  padding: 20px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 40px;
+}
+
+.form h2 {
+  border-bottom: 1px solid #CFCFCF;
+  padding: 10px;
+  margin: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.button-form {
+  border: 1px solid #CFCFCF;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 11px;
+  font-size: 20px;
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-weight: 900;
+  line-height: 1.2;
+
+&:hover {
+  background-color: #446C01;
+  color: white;
+}
+
+}
+
+.input {
+margin-left: 150px;
+margin-right: 150px;
+}
