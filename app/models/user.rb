@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :plants
   has_many :pets
+  has_one_attached :avatar
 end
