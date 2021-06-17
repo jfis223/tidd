@@ -1,0 +1,38 @@
+<div class="container pt-5">
+  <div class="d-flex justify-content-center align-items-center flex-column mb-3">
+
+    <div class="profile_card card p-4 pt-5">
+      <!--  <div class="profile mr-3"><%= @user.avatar %></div> -->
+        <div class="media-body text-center text-black p-4">
+          <h4 class="mt-0 mb-0">Welcome, <%= @user.name %>!</h4>
+          <p class="small mb-4 pt-2"><%= @user.email %></p>
+          <a href="#" class="btn btn-sm btn-block">Edit profile</a>
+        </div>
+    </div>
+
+    <div class="p-3">
+      <div class="text-center pt-5">
+        <h3 class="p-3">MY PETS 🐕</h3>
+        <% if @user.pets.empty? %>
+          <%= "You have no pets yet!" %>
+        <% else %>
+          <%= @user.pets.each do |p| %>
+          <%= @user.pets %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="text-center pt-5">
+        <h3 class="p-3">MY PLANTS 🌱</h3>
+         <% if @user.plants.empty? %>
+          <%= "You have no plants yet!" %>
+        <% else %>
+          <%= @user.plants.each do |p| %>
+          <%= @user.plants %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
