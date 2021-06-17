@@ -1,15 +1,15 @@
 <header class="site-header">
 
   <div class="wrapper site-header__wrapper">
-    <div>
-    <a class="navbar-brand" href="#">
-      <%= image_tag "Logo.png" %>
-    </a>
-    <a href="#" class="brand">The Impending Doom Dodger</a>
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="/">
+        <%= image_tag "Logo.png" %>
+      </a>
+      <a href="/" class="brand">The Impending Doom Dodger</a>
     </div>
       <nav class="nav">
         <button class="nav__toggle btn-green" aria-expanded="false" type="button">
-            Menu
+            <i class="fas fa-bars"></i>
         </button>
           <ul class="nav__wrapper">
             <% if user_signed_in? %>

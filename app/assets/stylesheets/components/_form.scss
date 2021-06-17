@@ -27,7 +27,7 @@
   line-height: 1.2;
 
 &:hover {
-  background-color: #446C01;
+  background-color: #809C53;
   color: white;
 }
 
@@ -36,4 +36,12 @@
 .input {
 margin-left: 150px;
 margin-right: 150px;
+}
+
+.pet_selection {
+  display: none;
+}
+
+.pet_selection_active {
+  display: block;
 }

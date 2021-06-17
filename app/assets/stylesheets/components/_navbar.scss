@@ -6,7 +6,8 @@
 $small: 600px;
 
 .brand {
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 a {
@@ -14,10 +15,27 @@ a {
   color: #FFFFFF;
 }
 
+
+@media only screen and (max-width: 1024px) {
+  .brand {
+    display: none;
+  }
+}
+
+a.brand {
+  color: #ffffff;
+}
+
+a.brand:hover {
+  color: #ffffff;
+}
+
 .site-header {
   position: relative;
-  background-color: #446C01;
-  opacity: 68%;
+  background-color: #809C53;
+  opacity: 100%;
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
+
 }
 
 .site-header__wrapper {
@@ -26,32 +44,37 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem,
 }
 
 .nav__wrapper {
-  position: fixed;
-  top: 170px;
+  position: absolute;
+  top: 90px;
   right: 0;
   width: Max(220px, 20%);
   bottom: 0;
-  z-index: 1;
+  z-index: 3;
   visibility: hidden;
   opacity: 0;
   transform: translateX(100%);
-  background-color: #446C01;
+  background-color: #809C53;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   display: block;
-  height: 180px;
+  height: 100vh;
 
   &.active {
     visibility: visible;
-    opacity: 0.6;
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
+.navbar-brand img {
+  height: 50px;
+}
+
 .nav__item {
-  border-bottom: 1px solid rgba(#000, 0.2);
 
   a {
     display: block;
@@ -73,8 +96,17 @@ a {
 }
 
 .btn-green {
-  background-color: #446C01;
+  background-color: #809C53;
   &:hover {
-  background-color: #446C01
+  background-color: #809C53;
 }
 }
+
+ul {
+    list-style-type: none;
+}
+
+ul a:hover {
+ color: #ffffff;
+}
+

@@ -1,0 +1,4 @@
+<%= simple_form_for [@pet, @pet_category] do |f| %>
+<%= f.association :category, collection: Category.all %>
+<%= f.submit %>
+<% end %>
