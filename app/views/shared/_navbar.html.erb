@@ -1,5 +1,4 @@
 <header class="site-header">
-
   <div class="wrapper site-header__wrapper">
     <div class="d-flex align-items-center">
       <a class="navbar-brand" href="/">
@@ -13,7 +12,6 @@
         </button>
           <ul class="nav__wrapper">
             <% if user_signed_in? %>
-              <li class="nav__item"><%= link_to 'My profile', dashboard_path %></li>
               <li class="nav__item"><%= link_to 'Add a pet', new_pet_path %></li>
               <li class="nav__item"><%= link_to 'Add a plant', new_plant_path %></li>
               <li class="nav__item"><%= link_to 'Sign out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you certain you want to log out ?' } %></li>
@@ -25,5 +23,3 @@
       </nav>
   </div>
 </header>
-
-
