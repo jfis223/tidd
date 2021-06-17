@@ -21,4 +21,15 @@ user = User.create!(name: 'joaquin', email: 'email@gmail.com', password: 'passwo
 puts 'Creating your pet...'
 
 pet1 = Pet.create!(name: 'Coline', species: 'cat', breed: "American Curl", weight: 2, birthdate: '10/01/2020', location: 'Madrid', user: user)
+pet1_image = open('https://upload.wikimedia.org/wikipedia/commons/1/17/American_curl_2.jpg')
+pet1.image.attach(io: pet1_image, filename: 'image.jpg')
 
+pet2 = Pet.create!(name: 'Julian', species: 'dog', breed: "Akita", weight: 2, birthdate: '10/03/1990', location: 'Madrid', user: user)
+pet2_image = open('https://www.thesprucepets.com/thmb/Z73KKcKtsJ1fovlbIlvNSubG6o0=/1885x1414/smart/filters:no_upscale()/Akita-GettyImages-588622984-533e955df9214301a56b4c0689b32114.jpg')
+pet2.image.attach(io: pet2_image, filename: 'image.jpg')
+
+pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Cress', user: user)
+pet3_image = open('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/nutraingredients.com/news/research/b12-breakthrough-discovery-could-boost-vitamin-b12-for-veggies-using-cress/8226239-1-eng-GB/B12-breakthrough-Discovery-could-boost-vitamin-B12-for-veggies-using-cress.jpg')
+pet3.image.attach(io: pet3_image, filename: 'image.jpg')
+
+puts "All seeds created successfully"
