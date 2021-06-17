@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("partials/header")
+require("typed")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -34,6 +35,6 @@ import { formPetSelection } from '../components/form_pet';
 import { loadDynamicBannerText } from '../components/banner';
 
 document.addEventListener('turbolinks:load', () => {
-  // loadDynamicBannerText();
+  loadDynamicBannerText();
   formPetSelection();
 });

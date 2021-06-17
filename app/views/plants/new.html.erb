@@ -8,7 +8,7 @@
 <%= simple_form_for (@plant) do |p| %>
 <%= p.input :nickname, placeholder: 'Nickname' %>
 <%= p.input :location, placeholder: 'Location' %>
-<%= p.input :species, collection: Plant::SPECIES %>
+<%= p.input :species, collection: Plant::SPECIES_FILTER %>
 <%= p.input :image, as: :file, required: false %>
 </div>
 <div class="form-actions">

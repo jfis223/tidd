@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :plants
   has_many :pets
   has_one_attached :avatar
+  validates :name, presence: true
 end
