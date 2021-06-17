@@ -8,6 +8,8 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     authorize @pet
+    response = JSON.parse(RestClient.get(pet_url(@pet.breed)))
+    @description = response[0]["description"]
   end
 
   def new
@@ -48,5 +50,9 @@ class PetsController < ApplicationController
 
   def pet_params
     params.require(:pet).permit(:name, :breed, :weight, :birthdate, :location, :species)
+  end
+
+  def pet_url(id)
+    "https://api.thecatapi.com/v1/breeds/search?q=#{id}"
   end
 end
