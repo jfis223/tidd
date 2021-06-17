@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts = "Deleting all previous elements..."
+
+User.delete_all
+Category.delete_all
+PetCategory.delete_all
+PetNotification.delete_all
+Pet.delete_all
+Plant.delete_all
+
+
+user = User.create!(name: 'joaquin', email: 'email@gmail.com', password: 'password')
