@@ -1,7 +1,7 @@
 
 const formPetSelection = () => {
 
-  const selection = document.getElementById("pet_type")
+  const selection = document.getElementById("pet_species")
   selection.addEventListener('change', () => {
 
     if (selection.value === "dog") {
