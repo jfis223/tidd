@@ -12,7 +12,7 @@
         </button>
           <ul class="nav__wrapper">
             <% if user_signed_in? %>
-
+              <li class="nav__item"> <div class='avatar'> <%= cl_image_tag @user.avatar.key, class: 'profile' %></div></li>
               <li class="nav__item"><%= link_to 'My profile', dashboard_path %></li>
               <li class="nav__item"><%= link_to 'Add a pet', new_pet_path %></li>
               <li class="nav__item"><%= link_to 'Add a plant', new_plant_path %></li>
