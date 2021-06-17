@@ -1,13 +1,18 @@
 <div class="container pt-5">
   <div class="d-flex justify-content-center align-items-center flex-column mb-3">
-
     <div class="profile_card card p-4 pt-5">
-      <!--  <div class="profile mr-3"><%= @user.avatar %></div> -->
-        <div class="media-body text-center text-black p-4">
-          <h4 class="mt-0 mb-0">Welcome, <%= @user.name %>!</h4>
-          <p class="small mb-4 pt-2"><%= @user.email %></p>
-          <a href="#" class="btn btn-sm btn-block">Edit profile</a>
-        </div>
+      <div class="avatar", style="text-align: center">
+      <% if @user.avatar.attached?%>
+        <div class="d-flex justify-content-center mr-3"><%= cl_image_tag @user.avatar.key, class: "avatar" %></div>
+      <% else %>
+        <div class=" mr-3"><%= image_tag "https://via.placeholder.com/350x150" %></div>
+      <% end %>
+      </div>
+      <div class="media-body text-center text-black p-4">
+        <h4 class="mt-0 mb-0">Welcome, <%= @user.name %>!</h4>
+        <p class="small mb-4 pt-2"><%= @user.email %></p>
+        <%= link_to "Edit profile", edit_user_registration_path, class:"btn btn-sm btn-block" %>
+      </div>
     </div>
 
     <div class="p-3">
@@ -21,7 +26,6 @@
           <% end %>
         <% end %>
       </div>
-
       <div class="text-center pt-5">
         <h3 class="p-3">MY PLANTS 🌱</h3>
          <% if @user.plants.empty? %>
@@ -33,6 +37,5 @@
         <% end %>
       </div>
     </div>
-
   </div>
 </div>
