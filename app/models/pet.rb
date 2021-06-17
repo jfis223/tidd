@@ -27,8 +27,16 @@ class Pet < ApplicationRecord
     CAT_BREED << cat["name"]
   end
 
+  CAT_AND_DOG_BREED = []
+  cat_breeds.map do |cat|
+    CAT_AND_DOG_BREED << cat["name"]
+  end
+  dog_breeds.map do |dog|
+    CAT_AND_DOG_BREED << dog["name"]
+  end
+
   validates :name, presence: true
-  validates :breed, inclusion: { in: DOG_BREED && CAT_BREED }
+  validates :breed, inclusion: { in: CAT_AND_DOG_BREED }
   validates :species, inclusion: { in: SPECIES }
   validates :birthdate, presence: true
   has_one_attached :image
