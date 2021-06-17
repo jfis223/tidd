@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :pets
   resources :pet_categories
   resources :pet_notifications
+  get "dashboard", to: 'pages#dashboard'
 
 end
