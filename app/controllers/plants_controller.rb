@@ -6,6 +6,7 @@ class PlantsController < ApplicationController
   end
 
   def show
+    authorize @plant
   end
 
   def new
@@ -15,8 +16,10 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    authorize @pet
-    if @plant.save
+    @user = current_user
+    @plant.user = @user
+    authorize @plant
+    if @plant.save!
       redirect_to @plant, notice: 'your plant has been added!'
     else
       render :new
@@ -45,6 +48,6 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:specie, :nickname, :location)
+    params.require(:plant).permit(:species, :nickname, :location, :image)
   end
 end

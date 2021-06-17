@@ -1,0 +1,18 @@
+<div class="container justify-center">
+    <div class="d-flex justify-content-center p-4">
+      <h2>Your plant's profile</h2>
+    </div>
+    <div class="profile-card d-flex justify-content-center">
+      <div class="profile-photo p-4">
+
+        <%= cl_image_tag @plant.image.key %>
+      </div>
+      <div class="profile-info p-4">
+        <i class="far fa-bell"></i>
+        <h2><%= @plant.nickname %></h2>
+        <p><%= @plant.species %></p>
+        <p><%= @plant.location %></p>
+      </div>
+
+    </div>
+</div>
