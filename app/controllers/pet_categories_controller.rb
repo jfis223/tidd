@@ -1,6 +1,7 @@
 class PetCategoriesController < ApplicationController
   def index
 
+   @pet_categories = policy_scope(PetCategory).order(created_at: :desc)
   end
 
   def show
@@ -14,14 +15,17 @@ class PetCategoriesController < ApplicationController
   end
 
   def create
-    @pet_category = PetCategory.new(pet_category_params)
-
     @pet = Pet.find(params[:pet_id])
-    @pet_category.pet = @pet
-    authorize @pet_category
+    params["pet_category"]["category_id"].each do |category_id|
+      @pet_category = PetCategory.new(pet:@pet)
+      category = Category.find(category_id)
+      @pet_category.category = category
+      authorize @pet_category
+      @pet_category.save
+    end
 
     if @pet_category.save
-      redirect_to root_path
+      redirect_to @pet
     else
       render :new
     end
@@ -38,7 +42,7 @@ class PetCategoriesController < ApplicationController
 
   private
   def pet_category_params
-    params.require(:pet_category).permit(:pet_id, :category_id)
+    params.require(:pet_category).permit(:category_id)
 
   end
 

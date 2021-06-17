@@ -16,4 +16,8 @@ class PetPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
+
+  def show?
+    true
+  end
 end
