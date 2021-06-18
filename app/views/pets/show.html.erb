@@ -1,21 +1,25 @@
-<div class="container justify-center">
-    <div class="d-flex justify-content-center p-4">
-      <h2>Your Pet's profile</h2>
+<h2 class="mb-4 text-center"><strong>Your pet's profile</strong></h2>
+<div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-start">
+    <div>
+      <% if @pet.image.attached? %>
+        <%= cl_image_tag @pet.image.key, class: "show-img" %>
+      <% end %>
     </div>
-    <div class="profile-card d-flex justify-content-center">
-      <div class="profile-photo p-4">
-        <% if @pet.image.attached? %>
-        <%= cl_image_tag @pet.image.key %>
-        <% end %>
-      </div>
-      <div class="profile-info p-4">
-        <i class="far fa-bell"></i>
-        <h2><%= @pet.name %></h2>
-        <p><%= @pet.breed %></p>
-        <p><%= @pet.weight %> kg</p>
-      </div>
-      <div>
-        <p><%= @description %></p>
-      </div>
+
+    <div class="ml-5">
+      <h1><strong> <%= @pet.name %></strong></h1>
+      <h3><%= @pet.breed %></h3>
+      <h3 style="color: #809C53"><strong>Alive</strong></h3>
+      <h4><%= @pet.weight %> kg</h4>
+      <h5 style="color: #A5A5A5">Born <%= @pet.birthdate %></h5>
     </div>
+
+    <div>
+      <i class="far fa-bell big"></i>
+    </div>
+  </div>
 </div>
+
+    <h4 class="mt-4"><strong>Breed description</strong></h4>
+    <%= @description %>

@@ -1,0 +1,36 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card {
+  margin: 20px 5px;
+  padding: 20px;
+  background-color: white;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+}
+
+.show-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+}
+
+.big {
+  transform: scale(2);
+}
