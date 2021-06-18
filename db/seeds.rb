@@ -25,7 +25,7 @@ pet1 = Pet.create!(name: 'Coline', species: 'cat', breed: "American Curl", weigh
 pet1_image = open('https://upload.wikimedia.org/wikipedia/commons/1/17/American_curl_2.jpg')
 pet1.image.attach(io: pet1_image, filename: 'image.jpg')
 
-pet2 = Pet.create!(name: 'Penelope', species: 'dog', breed: "Akita", weight: 2, birthdate: '10/03/1990', location: 'Madrid', user: user)
+pet2 = Pet.create!(name: 'Bob', species: 'dog', breed: "Akita", weight: 2, birthdate: '10/03/1990', location: 'Madrid', user: user)
 pet2_image = open('https://www.thesprucepets.com/thmb/Z73KKcKtsJ1fovlbIlvNSubG6o0=/1885x1414/smart/filters:no_upscale()/Akita-GettyImages-588622984-533e955df9214301a56b4c0689b32114.jpg')
 pet2.image.attach(io: pet2_image, filename: 'image.jpg')
 
