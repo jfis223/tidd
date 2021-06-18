@@ -8,8 +8,15 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     authorize @pet
-    response = JSON.parse(RestClient.get(pet_url(@pet.breed)))
-    @description = response[0]["description"]
+    if @pet.species = "dog"
+      response = JSON.parse(RestClient.get(dog_url(@pet.breed)))
+      @description = response[0]["description"]
+    else
+      response = JSON.parse(RestClient.get(cat_url(@pet.breed)))
+      @description = response[0]["description"]
+      @photo = response[2]["url"]
+    end
+
   end
 
   def new
@@ -52,7 +59,15 @@ class PetsController < ApplicationController
     params.require(:pet).permit(:name, :breed, :weight, :birthdate, :location, :species)
   end
 
-  def pet_url(id)
+  def dog_url(id)
     "https://api.thecatapi.com/v1/breeds/search?q=#{id}"
+  end
+
+  def dog_photo_url(image_id)
+    "https://api.thedogapi.com/v1/images/#{image_id}"
+  end
+
+  def cat_url(id)
+    "https://api.thecatapi.com/v1/images/search?breed_ids=#{id}"
   end
 end
