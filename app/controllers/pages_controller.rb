@@ -6,5 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @pets = Pet.where(user: @user)
+    @plants = Plant.where(user: @user)
   end
 end
