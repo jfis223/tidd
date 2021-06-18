@@ -8,15 +8,13 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     authorize @pet
-    if @pet.species = "dog"
+    if @pet.species == "dog"
       response = JSON.parse(RestClient.get(dog_url(@pet.breed)))
-      @description = response[0]["description"]
+      @description = response[0]["temperament"]
     else
       response = JSON.parse(RestClient.get(cat_url(@pet.breed)))
       @description = response[0]["description"]
-      @photo = response[2]["url"]
     end
-
   end
 
   def new
@@ -60,14 +58,10 @@ class PetsController < ApplicationController
   end
 
   def dog_url(id)
-    "https://api.thecatapi.com/v1/breeds/search?q=#{id}"
-  end
-
-  def dog_photo_url(image_id)
-    "https://api.thedogapi.com/v1/images/#{image_id}"
+    "https://api.thedogapi.com/v1/breeds/search?q=#{id}"
   end
 
   def cat_url(id)
-    "https://api.thecatapi.com/v1/images/search?breed_ids=#{id}"
+    "https://api.thecatapi.com/v1/breeds/search?q=#{id}"
   end
 end
