@@ -1,2 +1,21 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<div class="container justify-center">
+    <div class="d-flex justify-content-center p-4">
+      <h2>Your Pet's profile</h2>
+    </div>
+    <div class="profile-card d-flex justify-content-center">
+      <div class="profile-photo p-4">
+        <% if @pet.image.attached? %>
+        <%= cl_image_tag @pet.image.key %>
+        <% end %>
+      </div>
+      <div class="profile-info p-4">
+        <i class="far fa-bell"></i>
+        <h2><%= @pet.name %></h2>
+        <p><%= @pet.breed %></p>
+        <p><%= @pet.weight %> kg</p>
+      </div>
+      <div>
+        <p><%= @description %></p>
+      </div>
+    </div>
+</div>
