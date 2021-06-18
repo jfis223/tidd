@@ -6,6 +6,8 @@
       <div class="profile-photo p-4">
         <% if @pet.image.attached? %>
         <%= cl_image_tag @pet.image.key %>
+        <% else %>
+        <%= @photo %>
         <% end %>
       </div>
       <div class="profile-info p-4">
@@ -15,7 +17,7 @@
         <p><%= @pet.weight %> kg</p>
       </div>
       <div>
-        <p><%= @description %></p>
+        <p>Description : <%= @description %></p>
       </div>
     </div>
 </div>
