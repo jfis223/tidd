@@ -1,2 +1,12 @@
-<%= render './partials/homepage_banner' %>
-<%= render './partials/buttons' %>
+<% if user_signed_in? %>
+  <%= render './partials/welcome_back' %>
+  <%= render './partials/buttons' %>
+  <%= render './partials/running_dog' %>
+<% else %>
+  <%= render './partials/homepage_banner' %>
+<% end %>
+
+
+
+
+

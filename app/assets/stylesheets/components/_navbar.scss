@@ -62,6 +62,7 @@ a.brand:hover {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   display: block;
   height: 100vh;
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
 
   &.active {
     visibility: visible;

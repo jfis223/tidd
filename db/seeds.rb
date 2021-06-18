@@ -16,6 +16,8 @@ User.delete_all
 
 
 user = User.create!(name: 'joaquin', email: 'email@gmail.com', password: 'password')
+user_avatar = open('https://cdn.vox-cdn.com/uploads/chorus_asset/file/17588772/1031085.jpg')
+user.avatar.attach(io: user_avatar, filename: 'image.jpg')
 
 puts 'Creating your pets, plants and categories...'
 
