@@ -23,7 +23,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { formPetSelection } from '../components/form_pet';
 import { loadDynamicBannerText } from '../components/banner';
+import { menuToggle } from '../partials/header';
+
 document.addEventListener('turbolinks:load', () => {
-  // loadDynamicBannerText();
+  loadDynamicBannerText();
   formPetSelection();
+  menuToggle();
 });
+
