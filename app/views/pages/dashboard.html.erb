@@ -22,8 +22,8 @@
         <% if @user.pets.empty? %>
           <%= "You have no pets yet!" %>
         <% else %>
-          <%= @user.pets.each do |p| %>
-          <%= @user.pets %>
+          <%= @pets.each do |pet| %>
+          <%= pet.name %>
           <% end %>
         <% end %>
       </div>
@@ -32,8 +32,8 @@
          <% if @user.plants.empty? %>
           <%= "You have no plants yet!" %>
         <% else %>
-          <%= @user.plants.each do |p| %>
-          <%= @user.plants %>
+          <%= @plants.each do |plant| %>
+          <%= plant.nickname %>
           <% end %>
         <% end %>
       </div>
