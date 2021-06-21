@@ -7,7 +7,9 @@ class UserMailer < ApplicationMailer
   #
   def welcome(user)
     @user = user
+    @user.pet = @pet
     # @user.pet = @pet
     mail(to: @user.email, subject: 'Welcome to Le Wagon')
+    raise
   end
 end
