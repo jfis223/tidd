@@ -1,0 +1,38 @@
+<div class="pt-4 pb-3">
+  <h5>Featured breeds</h5>
+</div>
+
+  <% dog_url = 'https://api.thedogapi.com/v1/breeds' %>
+  <% dog_breeds_string = RestClient.get(dog_url).body  %>
+  <% dog_breeds = JSON.parse(dog_breeds_string) %>
+  <% dog = dog_breeds.sample %>
+  <% dog_image_link = dog["image"]["url"] %>
+
+  <% cat_url = 'https://api.thecatapi.com/v1/breeds' %>
+  <% cat_breeds_string = RestClient.get(cat_url).body  %>
+  <% cat_breeds = JSON.parse(cat_breeds_string) %>
+  <% cat = cat_breeds.sample %>
+  <% cat_image_link = cat["image"]["url"] %>
+
+<div class="row">
+
+<div class="col-6">
+  <div class="card-trip">
+    <img src=<%= dog_image_link %> />
+    <div class="card-trip-infos">
+      <h6 style="font-size: 1.5rem"> <%= dog["name"] %></h6>
+       <p><%= dog["temperament"] %></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-6">
+  <div class="card-trip">
+    <img src=<%= cat_image_link %> />
+    <div class="card-trip-infos">
+      <h6 style="font-size: 1.5rem"> <%= cat["name"] %></h6>
+       <p><%= cat["description"] %></p>
+    </div>
+  </div>
+</div>
+</div>

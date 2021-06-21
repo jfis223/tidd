@@ -30,7 +30,7 @@ pet2_image = open('https://www.thesprucepets.com/thmb/Z73KKcKtsJ1fovlbIlvNSubG6o
 pet2.image.attach(io: pet2_image, filename: 'image.jpg')
 
 pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Cress', user: user)
-pet3_image = open('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/nutraingredients.com/news/research/b12-breakthrough-discovery-could-boost-vitamin-b12-for-veggies-using-cress/8226239-1-eng-GB/B12-breakthrough-Discovery-could-boost-vitamin-B12-for-veggies-using-cress.jpg')
+pet3_image = open('https://cdn.britannica.com/s:800x450,c:crop/85/180185-138-99D93506/Overview-garden-cress.jpg')
 pet3.image.attach(io: pet3_image, filename: 'image.jpg')
 
 category1 = Category.create!(name: "food")

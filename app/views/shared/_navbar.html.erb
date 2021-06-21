@@ -1,24 +1,14 @@
+
+
 <header class="site-header">
   <div class="wrapper site-header__wrapper">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand" href="/">
-        <%= image_tag "Logo.png" %>
-      </a>
-      <a href="/" class="brand"><strong>The Impending Doom Dodger</strong></a>
-    </div>
       <nav class="nav">
         <button class="nav__toggle btn-green" aria-expanded="false" type="button">
             <i class="fas fa-bars"></i>
         </button>
           <ul class="nav__wrapper">
             <% if user_signed_in? %>
-              <li class="nav__item"><div class="navatar", style="text-align: center">
-                <% if current_user.avatar.attached?%>
-                  <div class="profile mr-3"><%= cl_image_tag current_user.avatar.key %></div>
-                <% else %>
-                  <div class="profile mr-3"><%= image_tag "https://via.placeholder.com/350x150" %></div>
-                <% end %></li>
-              <li class="nav__item"><%= link_to 'My profile', dashboard_path %></li>
+              <li class="nav__item"><%= link_to 'View all pets & plants', dashboard_path %></li>
               <li class="nav__item"><%= link_to 'Add a pet', new_pet_path %></li>
               <li class="nav__item"><%= link_to 'Add a plant', new_plant_path %></li>
               <li class="nav__item"><%= link_to 'Sign out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you certain you want to log out ?' } %></li>
@@ -28,7 +18,26 @@
             <% end %>
           </ul>
       </nav>
-  </div>
-</header>
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="/">
+        <%= image_tag "Logo.png" %>
+      </a>
+    </div>
+                <div class="navatar">
+                <% if user_signed_in? %>
+                  <%= link_to dashboard_path do %>
+                  <% if user_signed_in? %>
+                      <% if current_user.avatar.attached?%>
+                        <div class="profile"><%= cl_image_tag current_user.avatar.key %></div>
+                      <% else %>
+                        <div class="profile"><%= image_tag "https://via.placeholder.com/350x150" %></div>
+                      <% end %>
+                  <% else %>
+                    <%= link_to 'Register', new_user_registration_path %>
+                  <% end %>
+              <% end %>
+              <% end %>
+              </div>
 
+</header>
 
