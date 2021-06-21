@@ -1,0 +1,29 @@
+<div class="carousel-container">
+  <h2 class="carousel-title">You forgot. Again.</h2>
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "01.jpg", alt: "Dog", class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "02.jpg", alt: "Dog", class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "03.jpg", alt: "Dog", class: "d-block w-100" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="below-hero">
+  <div class="content-hero row">
+    <div class="col-8">
+      <h3>A new way of being on top of your pets and plants</h3>
+      <p>We know they mean the world to you but sometimes you can forget. So dodge that feeling of impending doom with us!</p>
+      <%= link_to 'Start now!', new_user_registration_path, class: 'btn' %>
+    </div>
+    <div class="col-4">
+      <%= image_tag "04.jpg", alt: "Person walking dog", class: "hero-image" %>
+    </div>
+  </div>
+</div>
