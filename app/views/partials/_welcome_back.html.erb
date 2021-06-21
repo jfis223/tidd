@@ -1,6 +1,6 @@
 <div class="pl-2">
   <h2><strong>Welcome back, <%= current_user.name.capitalize %>!</strong></h2>
-  <h5>Here's everyone you're tracking</h5>
+  <h5>Here's your latest additions</h5>
 </div>
 <div class="cards">
     <% if current_user.pets.empty? %>
@@ -78,3 +78,4 @@
             <% end %>
     <% end %>
   <% end %>
+  </div>

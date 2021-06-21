@@ -1,7 +1,14 @@
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .cards {
+  grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -13,6 +20,12 @@
   box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
 }
 
+@media only screen and (max-width: 900px) {
+  .card {
+    width: 300px;
+  }
+}
+
 .card img {
   width: 100%;
   height: 300px;
@@ -20,6 +33,12 @@
   object-position: left top;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .card img {
+      object-position: center top;
+    }
 }
 
 .show-img {
@@ -38,9 +57,19 @@
 .name-and-breed h3 {
   font-size: 2.3rem;
 }
-
+@media only screen and (max-width: 900px) {
+  .name-and-breed h3 {
+    font-size: 1rem;
+      }
+}
 .name-and-breed h6 {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .name-and-breed h6 {
+    font-size: 1rem;
+      }
 }
 
 .icons i {

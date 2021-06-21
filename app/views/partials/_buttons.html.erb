@@ -1,7 +1,21 @@
-<h5>Want new responsabilities?</h5>
-<div class="d-flex justify-content-center align-items-center">
-
-  <%= link_to 'Add a plant 🌱', new_plant_path, class: 'button-main' %>
-
-  <%= link_to 'Add a pet 🐕', new_pet_path, class: 'button-main' %>
+<div class="pb-3">
+  <h5>Want new responsibilities?</h5>
 </div>
+<div class="row">
+  <div class="col-6">
+    <%= link_to new_plant_path do %>
+    <div class="add-a-button" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1567871318107-054c098e6b59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=844&q=80)">
+      Add a plant
+    </div>
+    <% end  %>
+  </div>
+
+  <div class="col-6">
+    <%= link_to new_pet_path do %>
+    <div class="add-a-button" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)">
+      Add a pet
+    </div>
+    <% end  %>
+    </div>
+  </div>
+
