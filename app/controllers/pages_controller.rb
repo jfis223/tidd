@@ -8,5 +8,6 @@ class PagesController < ApplicationController
     @user = current_user
     @pets = Pet.where(user: @user)
     @plants = Plant.where(user: @user)
+    @notifications = current_user.notifications
   end
 end

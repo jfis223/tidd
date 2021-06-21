@@ -5,9 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(user)
-    @user = user
+  def new_notification
+    @pet_category = PetCategory.find(params[:pet_category])
+    @user = @pet_category.pet.user
     # @user.pet = @pet
-    mail(to: @user.email, subject: 'Welcome to Le Wagon')
+    mail(to: @user.email, subject: 'New reminder set !')
   end
 end
