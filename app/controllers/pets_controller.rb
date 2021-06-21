@@ -14,7 +14,7 @@ class PetsController < ApplicationController
     else
       response = JSON.parse(RestClient.get(cat_url(@pet.breed)))
       @description = response[0]["description"]
-      @photo = response[2]["url"]
+
     end
 
   end
@@ -61,10 +61,6 @@ class PetsController < ApplicationController
 
   def dog_url(id)
     "https://api.thecatapi.com/v1/breeds/search?q=#{id}"
-  end
-
-  def dog_photo_url(image_id)
-    "https://api.thedogapi.com/v1/images/#{image_id}"
   end
 
   def cat_url(id)
