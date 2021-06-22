@@ -4,11 +4,11 @@ devise_for :users, :controllers => { :registrations => :registrations }
   root to: 'pages#home'
   get "dashboard", to: 'pages#dashboard'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'about_us', to: 'pages#about_us'
   resources :plants
   resources :pets do
     resources :pet_categories do
       resources :pet_notifications
     end
   end
-
 end
