@@ -40,6 +40,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'typedjs-rails', '>= 2.0.9'
 gem 'letter_opener', group: :development
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
+gem 'whenever', require: false
 
 
 group :development, :test do  gem 'pry-byebug'
