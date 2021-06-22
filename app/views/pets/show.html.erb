@@ -1,25 +1,48 @@
-<h2 class="mb-4 text-center"><strong>Your pet's profile</strong></h2>
-<div class="d-flex justify-content-center">
-  <div class="d-flex justify-content-start">
-    <div>
-      <% if @pet.image.attached? %>
-        <%= cl_image_tag @pet.image.key, class: "show-img" %>
-      <% end %>
+<h2 class="mb-4"><strong>Your pet's profile</strong></h2>
+<div>
+  <% if @pet.image.attached? %>
+    <%= cl_image_tag @pet.image.key, class: "show-img" %>
+  <% end %>
+</div>
+
+<div class="show-main-card d-flex justify-content-between">
+      <div class="id">
+        <h1><strong> <%= @pet.name.capitalize %></strong></h1>
+        <h3><%= @pet.breed %></h3>
+        <h4 style="color: #809C53"><strong>Alive</strong></h4>
+      </div>
+        <div class="d-flex flex-column align-items-end justify-content-between">
+          <div class="p-2">
+             <i class="far fa-bell big" style="font-size: 1.2rem;"></i>
+          </div>
+          <div class="d-flex align-items-end flex-column">
+             <h5 style="color: #A5A5A5"><i class="fas fa-weight"></i> <%= @pet.weight %> kg</h5>
+             <h5 style="color: #A5A5A5"> <i class="fas fa-birthday-cake"></i> <%= @pet.birthdate %></h5>
+          </div>
+      </div>
     </div>
 
-    <div class="ml-5">
-      <h1><strong> <%= @pet.name.capitalize %></strong></h1>
-      <h3><%= @pet.breed %></h3>
-      <h3 style="color: #809C53"><strong>Alive</strong></h3>
-      <h4><%= @pet.weight %> kg</h4>
-      <h5 style="color: #A5A5A5">Born <%= @pet.birthdate %></h5>
-    </div>
+<h3 class="mt-4"><strong>Breed description</strong></h3>
 
-    <div>
-      <i class="far fa-bell big"></i>
+<% dog_url = "https://api.thedogapi.com/v1/breeds/search?q=#{@pet.breed}" %>
+<% dog_breeds_string = RestClient.get(dog_url).body  %>
+<% dog = JSON.parse(dog_breeds_string) %>
+
+<% cat_url = "https://api.thecatapi.com/v1/breeds/search?q=#{@pet.breed}" %>
+<% cat_breeds_string = RestClient.get(cat_url).body %>
+<% cat = JSON.parse(cat_breeds_string) %>
+
+<div class="row">
+  <div class="col-6 nopaddinga">
+    <% if dog == [] %>
+       <img class="img-breed" src=<%= "https://cdn2.thecatapi.com/images/#{cat[0]["reference_image_id"]}.jpg" %> />
+    <% else %>
+       <img class="img-breed" src=<%= "https://cdn2.thedogapi.com/images/#{dog[0]["reference_image_id"]}.jpg" %> />
+    <% end %>
+  </div>
+  <div class="col-6 nopaddingb">
+    <div class="breed-card">
+      <div class="breed-content"> <%= @description %> </div>
     </div>
   </div>
 </div>
-
-    <h4 class="mt-4"><strong>Breed description</strong></h4>
-    <%= @description %>

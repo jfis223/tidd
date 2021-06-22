@@ -42,12 +42,24 @@
 }
 
 .show-img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 600px;
   object-fit: cover;
-  object-position: left top;
-  border-radius: 4px;
-  border: 1px solid #e6e6e6;
+  object-position: top center;
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.show-main-card {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .big {
@@ -75,4 +87,46 @@
 .icons i {
   font-size: 1.5rem;
   padding: 5px 0px;
+}
+
+.img-breed {
+  object-fit: cover;
+  object-position: top center;
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.breed-card {
+  height: 300px;
+  margin-top: 20px;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nopaddinga {
+   padding-right: 0 !important;
+}
+
+.nopaddingb {
+   padding-left: 0 !important;
+}
+
+.description-text {
+  height: 300px;
+  padding: 15px;
+}
+
+.breed-description {
+  box-shadow: -1px 9px 21px -6px rgba(189,189,189,0.78);
+}
+
+.breed-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
