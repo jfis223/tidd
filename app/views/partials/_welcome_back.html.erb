@@ -1,6 +1,6 @@
 <div class="pl-2">
   <h2><strong>Welcome back, <%= current_user.name.capitalize %>!</strong></h2>
-  <h5>Here's your latest additions</h5>
+  <h5>Here are your latest additions</h5>
 </div>
 <div class="cards">
     <% if current_user.pets.empty? %>
@@ -32,7 +32,7 @@
                           </div>
                           <div class="name-and-breed pb-4">
                               <h3><strong><%= p.name %></strong></h3>
-                              <h6> <%= p.breed %> </h6>
+                              <h6 style="font-size: 1.2rem;"> <%= p.breed %> </h6>
                           </div>
                         </div>
                       </div>
@@ -43,7 +43,7 @@
   <% end %>
 
 
-    <% if current_user.pets.empty? %>
+    <% if current_user.plants.empty? %>
         <%= "You have no plants yet!" %>
     <% else %>
     <% current_user.plants.last(1).each do |p| %>
@@ -69,7 +69,7 @@
                   </div>
                 <div class="name-and-breed pb-4">
                   <h3><strong> <%= p.nickname %></strong></h3>
-                  <h6> <%= p.species %></h6>
+                  <h6 style="font-size: 1.2rem;"> <%= p.species %></h6>
                 </div>
                         </div>
                       </div>
