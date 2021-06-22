@@ -1,48 +1,56 @@
-<div class="container ">
-  <div class="about-section" style="text-align:center">
+
+  <div class="about-section" style="text-align:center; padding-bottom: 20px">
     <h1>About Us</h1>
     <p>This app is the story of a French girl, an Uruguayan and a Belgian guy who joined their force and propose…</p>
     <p>We all 3 have dogs and plants and a really busy lifestyle like most people do. It’s never easy to remember all our duties and we thought about something that will help people to achieve that.</p>
     <p>The Doom Dodger will make your life and the one of your pets and plants happier !</p>
   </div>
 
-  <h2 style="text-align:center">Our Team</h2>
-  <div class=" d-flex justify-content-evenly">
+  <h2 style="text-align: center; padding-bottom: 20px">Our Team</h2>
+  <div class=" d-flex justify-content-evenly" style="margin-top: 50px">
     <div class="column">
-      <div class="login_card">
+      <div class="about_card">
         <div class="container" style="text-align:center">
-          <h2>Joaquín</h2>
-          <p class="title">The Uruguayan Beauty</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>joaquin@tidd.com</p>
-          <p><button class="btn">Contact</button></p>
+          <%= image_tag "Jojo.jpg", alt:"Joaquín with dog", class:"avatar-float" %>
+          <div class="about_info">
+            <h2>Joaquín</h2>
+            <p class="title">The Uruguayan Beauty</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>joaquin@tidd.com</p>
+            <p><button class="btn">Contact</button></p>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="column">
-      <div class="login_card">
+      <div class="about_card">
         <div class="container" style="text-align:center">
-          <h2>Coline</h2>
-          <p class="title">The French Duchess</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>coline@tidd.com</p>
-          <p><button class="btn">Contact</button></p>
+          <div><%= image_tag "Co.jpg", alt:"Coline with plant", class:"avatar-float" %></div>
+            <div class="about_info">
+              <h2>Coline</h2>
+              <p class="title">The French Duchess</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>coline@tidd.com</p>
+              <p><button class="btn">Contact</button></p>
+            </div>
         </div>
       </div>
     </div>
 
     <div class="column">
-      <div class="login_card">
+      <div class="about_card">
         <div class="container" style="text-align:center">
-          <h2>Julian</h2>
-          <p class="title">The Belgian Legend</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>julian@tidd.com</p>
-          <p><button class="btn">Contact</button></p>
+          <%= image_tag "Ju.jpg", alt:"Julian with dogs", class:"avatar-float" %>
+          <div class="about_info">
+            <h2>Julian</h2>
+            <p class="title">The Belgian Dude</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>julian@tidd.com</p>
+            <p><button class="btn">Contact</button></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-</div>
