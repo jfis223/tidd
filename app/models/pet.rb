@@ -1,5 +1,6 @@
 class Pet < ApplicationRecord
   belongs_to :user
+  has_many :pet_categories
   has_many :categories, through: :pet_categories
   has_many :pet_notifications, through: :pet_categories
 

@@ -1,5 +1,7 @@
 <h1>Hello <%= @user.name %></h1>
 
-<p>Your pet needs you, don't forget to feed it </p>
+<% @pet.pet_categories.each do |pet_category| %>
+<p>You're tracking <%= pet_category.category.name %> for <%= pet_category.pet.name.capitalize %></p>
+<% end %>
   <%= link_to 'Go back to the website', root_url %>
 
