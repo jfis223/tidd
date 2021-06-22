@@ -2,3 +2,10 @@
   border-radius: 3px;
   height: 145px;
 }
+
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
