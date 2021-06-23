@@ -37,7 +37,7 @@ class PetsController < ApplicationController
 
   def update
     @pet.update(pet_params)
-    redirect_to pet_path
+    redirect_to new_pet_pet_category_path(@pet)
   end
 
   def edit

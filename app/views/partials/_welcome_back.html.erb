@@ -27,7 +27,9 @@
                               <div class="pr-2"><i class="fas fa-soap"></i></div>
                             </div>
                             <div class="icons pt-4 pr-4">
-                              <i class="far fa-bell"></i>
+                             <%= link_to edit_pet_path(p) do %>
+                                <i class="far fa-bell"></i>
+                              <% end %>
                             </div>
                           </div>
                           <div class="name-and-breed pb-4">
@@ -64,7 +66,9 @@
                       <i class="fas fa-tint"></i>
                     </div>
                       <div class="icons pt-4 pr-4">
-                      <i class="far fa-bell"></i>
+                      <%= link_to edit_plant_path(p) do %>
+                        <i class="far fa-bell"></i>
+                      <% end %>
                     </div>
                   </div>
                 <div class="name-and-breed pb-4">
