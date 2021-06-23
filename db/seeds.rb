@@ -28,8 +28,8 @@ pet2 = Pet.create!(name: 'Bob', species: 'dog', breed: "Akita", weight: 2, birth
 pet2_image = open('https://www.thesprucepets.com/thmb/Z73KKcKtsJ1fovlbIlvNSubG6o0=/1885x1414/smart/filters:no_upscale()/Akita-GettyImages-588622984-533e955df9214301a56b4c0689b32114.jpg')
 pet2.image.attach(io: pet2_image, filename: 'image.jpg')
 
-pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Cress', user: user)
-pet3_image = open('https://cdn.britannica.com/s:800x450,c:crop/85/180185-138-99D93506/Overview-garden-cress.jpg')
+pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Common Rue', user: user)
+pet3_image = open('https://www.gardencentrekoeman.co.uk/db/WAS4ef38d3b709d5/14573426226221523574_10be9b6cda_o.jpg')
 pet3.image.attach(io: pet3_image, filename: 'image.jpg')
 
 category1 = Category.create!(name: "Food")
