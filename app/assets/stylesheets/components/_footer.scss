@@ -2,8 +2,8 @@
   background: transparent;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  justify-content: center;
+  height: 50px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
@@ -11,13 +11,21 @@
   display: flex;
   align-items: center;
 }
-.footer-links a {
-  color: black;
-  opacity: 0.15;
+.footer-links {
+  color: #2b7b1f;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 15px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
+}
+
+.one:before, {
+  content: "";
+  height: 1px;
+  background: linear-gradient(to right,  rgba(43,123,31,0) 0%,rgba(43,123,31,1) 50%,rgba(0,0,0,0) 100%);
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
