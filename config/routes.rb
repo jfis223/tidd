@@ -6,6 +6,7 @@ devise_for :users, :controllers => { :registrations => :registrations }
   end
 
   root to: 'pages#home'
+  get "email", to: 'user_mailer#new_notification'
   get "dashboard", to: 'pages#dashboard'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'about_us', to: 'pages#about_us'
