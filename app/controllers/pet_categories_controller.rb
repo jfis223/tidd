@@ -32,9 +32,12 @@ class PetCategoriesController < ApplicationController
   end
 
   def edit
+    @pet_category = PetCategory.find(params[:id])
   end
 
   def update
+    @pet_category = PetCategory.find(params[:id])
+    @pet_category.update(params[:pet_category])
   end
 
   def destroy

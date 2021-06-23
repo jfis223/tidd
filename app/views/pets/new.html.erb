@@ -8,8 +8,8 @@
     <%= simple_form_for (@pet) do |p| %>
     <%= p.input :name, placeholder: 'Name' %>
     <%= p.input :species, collection: Pet::SPECIES_FILTER, selected: 'Cat' %>
-    <%= p.input :breed, placeholder: 'Breed', collection: Pet::DOG_BREED, input_html: { id: :dog_breeds, class: "pet_selection" } %>
-    <%= p.input :breed, placeholder: 'Breed', label: false, collection: Pet::CAT_BREED, input_html: { id: :cat_breeds } %>
+    <%= p.input :breed, placeholder: 'Breed', collection: Pet::CAT_AND_DOG_BREED %>
+  <!--   p.input :breed, placeholder: 'Breed', label: false, collection: Pet::CAT_BREED, input_html: { id: :cat_breeds } %> -->
     <%= p.input :birthdate, as: :date, placeholder: 'Birthdate' %>
     <%= p.input :weight, as: :integer, placeholder: 'Kg' %>
     <%= p.input :location, placeholder: 'Location' %>

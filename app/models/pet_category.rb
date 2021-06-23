@@ -10,7 +10,7 @@ class PetCategory < ApplicationRecord
   end
 
   def self.food_reminder
-    reminders = PetCategory.joins(:category).where(categories: { name: 'food' })
+    reminders = PetCategory.joins(:category).where(categories: { name: 'Food' })
     reminders.each do |reminder|
       notification = ReminderNotification.with(pet_category: reminder.id)
       notification.deliver(reminder.pet.user)
@@ -18,7 +18,7 @@ class PetCategory < ApplicationRecord
   end
 
   def self.walk_reminder
-    reminders = PetCategory.joins(:category).where(categories: { name: 'walk' })
+    reminders = PetCategory.joins(:category).where(categories: { name: 'Walks' })
     reminders.each do |reminder|
       notification = ReminderNotification.with(pet_category: reminder.id)
       notification.deliver(reminder.pet.user)
@@ -26,7 +26,7 @@ class PetCategory < ApplicationRecord
   end
 
   def self.vet_reminder
-    reminders = PetCategory.joins(:category).where(categories: { name: 'vet' })
+    reminders = PetCategory.joins(:category).where(categories: { name: 'Vet' })
     reminders.each do |reminder|
       notification = ReminderNotification.with(pet_category: reminder.id)
       notification.deliver(reminder.pet.user)
@@ -34,7 +34,7 @@ class PetCategory < ApplicationRecord
   end
 
   def self.bath_reminder
-    reminders = PetCategory.joins(:category).where(categories: { name: 'bath' })
+    reminders = PetCategory.joins(:category).where(categories: { name: 'Baths' })
     reminders.each do |reminder|
       notification = ReminderNotification.with(pet_category: reminder.id)
       notification.deliver(reminder.pet.user)

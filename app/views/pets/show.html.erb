@@ -47,3 +47,10 @@
     </div>
   </div>
 </div>
+
+<!-- app/views/offers/show.html.erb -->
+<% content_for :meta_title, "#{@pet.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @description %>
+<% if @pet.image.attached? %>
+<% content_for :meta_image, (cl_image_tag @pet.image.key) %>
+<% end %>
