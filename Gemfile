@@ -41,6 +41,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'typedjs-rails', '>= 2.0.9'
 gem 'letter_opener', group: :development
 gem 'sendgrid-ruby'
+gem 'sendgrid-actionmailer'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
