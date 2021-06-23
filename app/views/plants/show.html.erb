@@ -19,7 +19,27 @@
           </div>
       </div>
     </div>
-<!-- app/views/offers/show.html.erb -->
-<% content_for :meta_title, "#{@plant.nickname} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @plant.description %>
-<% content_for :meta_image, cl_image_path(@plant.photo.path) %>
+
+<% this_plant = {}  %>
+<%  plant_file = File.read('./app/assets/plantdb/data.json') %>
+<%  plants = JSON.parse(plant_file) %>
+<% plants["alphabetList"]["glossaryItems"].each do |result| %>
+<% this_plant = result if result["primaryName"] == @plant.species %>
+<% end %>
+<% url = this_plant["url"]  %>
+<% plant_description_string = RestClient.get(url).body  %>
+<% html_doc = Nokogiri::HTML(plant_description_string)  %>
+<% description = html_doc.search('#mntl-sc-block_1-0').text.strip  %>
+
+<div class="row">
+  <div class="col-6 nopaddinga">
+       <img class="img-breed" src=<%= this_plant["imageUrl"] %> />
+  </div>
+  <div class="col-6 nopaddingb">
+    <div class="breed-card">
+      <div class="breed-content"> <%= description %> </div>
+    </div>
+  </div>
+</div>
+
+

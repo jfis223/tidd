@@ -51,7 +51,7 @@
             <div class="card">
                     <div class="row">
                       <div class="col-8">
-                          <% if p.image.attached? %>
+                          <% if p.image %>
                             <%= cl_image_tag p.image.key %>
                           <% else %>
                             <%= "No image" %>

@@ -2,11 +2,10 @@ class Plant < ApplicationRecord
   belongs_to :user
   SPECIES_FILTER = []
 
-  url = 'https://raw.githubusercontent.com/dariusk/corpora/master/data/plants/plants.json'
-  user_serialized = RestClient.get(url)
-  plants = JSON.parse(user_serialized)
-  plants["plants"].each do |element|
-    SPECIES_FILTER << element["name"]
+  plant_file = File.read('./app/assets/plantdb/data.json')
+  plants = JSON.parse(plant_file)
+  plants["alphabetList"]["glossaryItems"].each do |element|
+    SPECIES_FILTER << element["primaryName"]
   end
 
   validates :species, presence: true
