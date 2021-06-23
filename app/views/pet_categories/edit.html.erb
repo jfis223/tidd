@@ -1,2 +1,22 @@
-<h1>PetCategories#edit</h1>
-<p>Find me in app/views/pet_categories/edit.html.erb</p>
+<div class="container justify-center">
+  <div class="form">
+    <div class="d-flex justify-content-center p-4">
+      <h2>What do you want to track?</h2>
+    </div>
+    <div class="input d-flex justify-content-center p-4">
+      <%= simple_form_for [@pet, @pet_category] do |f| %>
+        <%= f.association :category,
+                  as: :check_boxes,
+                  collection: Category.all,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item', include_hidden: false %>
+    </div>
+    <div class="form-actions">
+      <div class="row justify-content-center p-1">
+    <%= f.submit 'Start tracking !', class: "button-form" %>
+      </div>
+    </div>
+      <% end %>
+  </div>
+</div>
+
