@@ -14,8 +14,7 @@ Pet.delete_all
 Plant.delete_all
 User.delete_all
 
-
-user = User.create!(name: 'julian', email: 'email@gmail.com', password: 'password')
+user = User.create!(name: 'julian', email: 'julian@gmail.com', password: 'password')
 user_avatar = open('https://cdn.vox-cdn.com/uploads/chorus_asset/file/17588772/1031085.jpg')
 user.avatar.attach(io: user_avatar, filename: 'image.jpg')
 
@@ -33,9 +32,9 @@ pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Cress', 
 pet3_image = open('https://cdn.britannica.com/s:800x450,c:crop/85/180185-138-99D93506/Overview-garden-cress.jpg')
 pet3.image.attach(io: pet3_image, filename: 'image.jpg')
 
-category1 = Category.create!(name: "food")
-category2 = Category.create!(name: "vet")
-category3 = Category.create!(name: "walks")
-category4 = Category.create!(name: "bath")
+category1 = Category.create!(name: "Food")
+category2 = Category.create!(name: "Vet")
+category3 = Category.create!(name: "Walks")
+category4 = Category.create!(name: "Baths")
 
 puts "All seeds created successfully"

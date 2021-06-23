@@ -36,8 +36,6 @@ class Pet < ApplicationRecord
     CAT_AND_DOG_BREED << dog["name"]
   end
 
-puts CAT_AND_DOG_BREED
-
   validates :name, presence: true
   validates :breed, inclusion: { in: CAT_AND_DOG_BREED }
   validates :species, inclusion: { in: SPECIES }

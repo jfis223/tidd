@@ -35,7 +35,9 @@
                         <div class="profile"><%= image_tag "https://via.placeholder.com/350x150" %></div>
                       <% end %>
                   <% else %>
-                    <%= link_to 'Register', new_user_registration_path %>
+                    <div class="profile">
+                      <h6 class="nav__dashboard" style="color: white"><strong><%= link_to 'Register', new_user_registration_path %></strong></h6>
+                    </div>
                   <% end %>
               <% end %>
               <% end %>
