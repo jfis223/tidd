@@ -4,7 +4,11 @@
   <div class="wrapper site-header__wrapper">
       <nav class="nav">
         <button class="nav__toggle btn-green" aria-expanded="false" type="button">
-            <i class="fas fa-plus"></i>
+            <% if user_signed_in? %>
+              <i class="fas fa-plus"></i>
+            <% else %>
+              <i class="fas fa-user"></i>
+            <% end %>
         </button>
           <ul class="nav__wrapper">
             <% if user_signed_in? %>

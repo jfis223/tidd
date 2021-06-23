@@ -27,9 +27,9 @@
                               <div class="pr-2"><i class="fas fa-soap"></i></div>
                             </div>
                             <div class="icons pt-4 pr-4">
-                             <%= link_to edit_pet_path(p) do %>
+
                                 <i class="far fa-bell"></i>
-                              <% end %>
+
                             </div>
                           </div>
                           <div class="name-and-breed pb-4">
@@ -53,7 +53,7 @@
             <div class="card">
                     <div class="row">
                       <div class="col-8">
-                          <% if p.image %>
+                          <% if p.image.attached? %>
                             <%= cl_image_tag p.image.key %>
                           <% else %>
                             <%= "No image" %>
@@ -66,9 +66,9 @@
                       <i class="fas fa-tint"></i>
                     </div>
                       <div class="icons pt-4 pr-4">
-                      <%= link_to edit_plant_path(p) do %>
+
                         <i class="far fa-bell"></i>
-                      <% end %>
+
                     </div>
                   </div>
                 <div class="name-and-breed pb-4">
