@@ -3,4 +3,4 @@
 meta_product_name: "Doom Dodger"
 meta_title: "Doom Dodger - Track your Plants & Pets"
 meta_description: "A reminders app that parses the plant and dog species from websites and reminds you when to water, repot, vaccinate and feed them."
-# meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "cover.png" # should exist in `app/assets/images/`
