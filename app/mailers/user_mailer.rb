@@ -9,6 +9,7 @@ class UserMailer < ApplicationMailer
     @pet_category = PetCategory.find(params[:pet_category])
     @user = @pet_category.pet.user
     @pet = @pet_category.pet
+    @plants = @user.plants
     # @user.pet = @pet
     mail(to: @user.email, subject: 'New reminder set !')
   end

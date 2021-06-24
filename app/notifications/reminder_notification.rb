@@ -18,7 +18,7 @@ class ReminderNotification < Noticed::Base
   def message
     "You have a new reminder!"
   end
-  #
+
   def url
     pet_category = PetCategory.find(params[:pet_category])
     pet_path(pet_category.pet)
