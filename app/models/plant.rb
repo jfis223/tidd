@@ -4,7 +4,7 @@ class Plant < ApplicationRecord
 
   def send_notification
     notification = NewNotification.with(plant: self.id)
-    notification.deliver(self.plant.user)
+    notification.deliver(self.user)
   end
 
   SPECIES_FILTER = []
