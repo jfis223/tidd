@@ -20,21 +20,21 @@ user.avatar.attach(io: user_avatar, filename: 'image.jpg')
 
 puts 'Creating your pets, plants and categories...'
 
-pet1 = Pet.create!(name: 'Coline', species: 'cat', breed: "American Curl", weight: 2, birthdate: '10/01/2020', location: 'Madrid', user: user)
-pet1_image = open('https://upload.wikimedia.org/wikipedia/commons/1/17/American_curl_2.jpg')
-pet1.image.attach(io: pet1_image, filename: 'image.jpg')
-
-pet2 = Pet.create!(name: 'Bob', species: 'dog', breed: "Akita", weight: 2, birthdate: '10/03/1990', location: 'Madrid', user: user)
-pet2_image = open('https://www.thesprucepets.com/thmb/Z73KKcKtsJ1fovlbIlvNSubG6o0=/1885x1414/smart/filters:no_upscale()/Akita-GettyImages-588622984-533e955df9214301a56b4c0689b32114.jpg')
+pet2 = Pet.create!(name: 'Bob', species: 'dog', breed: "Beagle", weight: 2, birthdate: '10/03/1990', location: 'Madrid', user: user)
+pet2_image = open('https://miro.medium.com/max/1000/1*2bZ6LsJfuZ9CaQxljNvaFA.jpeg')
 pet2.image.attach(io: pet2_image, filename: 'image.jpg')
 
-pet3 = Plant.create!(nickname: 'Joaquin', location: 'Madrid', species: 'Common Rue', user: user)
+pet3 = Plant.create!(nickname: 'Matt', location: 'Madrid', species: 'Common Rue', user: user)
 pet3_image = open('https://www.gardencentrekoeman.co.uk/db/WAS4ef38d3b709d5/14573426226221523574_10be9b6cda_o.jpg')
 pet3.image.attach(io: pet3_image, filename: 'image.jpg')
 
+pet4 = Plant.create!(nickname: 'Jane', location: 'Madrid', species: 'Cactus', user: user)
+pet4_image = open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cactus-plant-pot-stand-1599155636.jpg')
+pet4.image.attach(io: pet4_image, filename: 'image.jpg')
+
 category1 = Category.create!(name: "Food")
 category2 = Category.create!(name: "Vet")
-category3 = Category.create!(name: "Walks")
-category4 = Category.create!(name: "Baths")
+category3 = Category.create!(name: "Walk")
+category4 = Category.create!(name: "Bath")
 
 puts "All seeds created successfully"
