@@ -357,14 +357,11 @@ a[x-apple-data-detectors='true'] {
       <span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;">
         <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
           <% choices = []
-             petname = "" %>
-            <% @pet.pet_categories.each do |pet_category| %>
-              <% choices << pet_category.category.name %>
-              <% petname = pet_category.pet.name.capitalize %>
+             nickname = "" %>
+            <% @plant.each do |plant| %>
+              <% plantnickname = plant.nickname.capitalize %>
           <% end %>
-          Don't forget to
-          <% choices.each do |choice| %>
-            <%= choice %>,
+          Don't forget to water
           <% end %> for <%= petname %>
         </span>
     </span>
@@ -405,10 +402,10 @@ a[x-apple-data-detectors='true'] {
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr>
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
-      <% if @pet.image.attached? %>
-        <%= image_tag @pet.image.service_url, width: 200 %>
+      <% if @plant.image.attached? %>
+        <%= image_tag @plant.photo.service_url, width: 200 %>
       <% else %>
-        <%= image_tag "https://www.flytap.com/-/media/Flytap/new-tap-pages/travelling-with-animals/pets/flying-with-pets-og-image-1200x630.jpg", width: 200 %>
+        <%= image_tag "https://img.plantis.info/francais/2014/06/Patte-dOurs.jpg", width: 200 %>
       <% end %>
       </div>
 
