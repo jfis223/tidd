@@ -358,26 +358,17 @@ a[x-apple-data-detectors='true'] {
               <% choices << pet_category.category.name %>
               <% petname = pet_category.pet.name.capitalize %>
           <% end %>
-          <% end %>
-          You're tracking
-          <% choices.each do |choice| %>
-            <%= choice %>,
-          <% end %> for <%= petname %>
-        </span>
-    </span>
-    </p>
-  </div>
 
-  <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;">
-      <span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;">
-        <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
+          <% end %>
           <% plantnickname = "" %>
             <% @plants.each do |plant| %>
               <% plantnickname = plant.nickname.capitalize %>
           <% end %>
           You're tracking
           <%= plantnickname %>
+          <% choices.each do |choice| %>
+            <%= choice %>,
+          <% end %> for <%= petname %>
         </span>
     </span>
     </p>
