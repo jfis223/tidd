@@ -102,9 +102,3 @@
     <% end %>
   <% end %>
 </div>
-
-<div class="container" style="display: none;">
-  <% @notifications.each do |notification| %>
-  <p><%= link_to notification.to_notification.message, notification.to_notification.url %></p>
-  <% end %>
-</div>

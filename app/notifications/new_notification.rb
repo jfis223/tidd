@@ -21,8 +21,9 @@ class NewNotification < Noticed::Base
     "You have a new notification!"
   end
   #
-  def url
-    pet_category = PetCategory.find(params[:pet_category])
-    pet_path(pet_category.pet)
-  end
+  # def url
+
+  #  pet_category = PetCategory.find(params[:pet_category])
+  #  pet_path(pet_category.pet)
+  # end
 end
