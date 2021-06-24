@@ -24,10 +24,12 @@ import "bootstrap";
 import { formPetSelection } from '../components/form_pet';
 import { loadDynamicBannerText } from '../components/banner';
 import { menuToggle } from '../partials/header';
+import { frequency } from '../components/frequency';
 
 document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   formPetSelection();
   menuToggle();
+  frequency();
 });
 
