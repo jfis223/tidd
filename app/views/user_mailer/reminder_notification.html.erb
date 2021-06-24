@@ -362,7 +362,7 @@ a[x-apple-data-detectors='true'] {
               <% choices << pet_category.category.name %>
               <% petname = pet_category.pet.name.capitalize %>
           <% end %>
-          You're tracking
+          Don't forget to
           <% choices.each do |choice| %>
             <%= choice %>,
           <% end %> for <%= petname %>
@@ -406,7 +406,9 @@ a[x-apple-data-detectors='true'] {
   <tr>
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
       <% if @pet.image.attached? %>
-        <%= cl_image_tag @pet.image.key, width: 200 %>
+        <%= image_tag @pet.image.service_url, width: 200 %>
+      <% else %>
+        <%= image_tag "https://www.flytap.com/-/media/Flytap/new-tap-pages/travelling-with-animals/pets/flying-with-pets-og-image-1200x630.jpg", width: 200 %>
       <% end %>
       </div>
 

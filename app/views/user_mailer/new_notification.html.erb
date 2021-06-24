@@ -366,6 +366,21 @@ a[x-apple-data-detectors='true'] {
     </p>
   </div>
 
+  <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%; text-align: center;">
+      <span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;">
+        <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
+          <% plantnickname = "" %>
+            <% @plant.each do |plant| %>
+              <% plantnickname = plant.nickname.capitalize %>
+          <% end %>
+          Please, don't forget to give water to
+          <%= plantnickname %>
+        </span>
+    </span>
+    </p>
+  </div>
+
       </td>
     </tr>
   </tbody>
@@ -402,6 +417,9 @@ a[x-apple-data-detectors='true'] {
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
       <% if @pet.image.attached? %>
         <%= cl_image_tag @pet.image.key, width: 200 %>
+      <% end %>
+      <% if @plant.image.attached? %>
+        <%= cl_image_tag @plant.image.key, width: 200 %>
       <% end %>
       </div>
 
