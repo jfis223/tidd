@@ -353,9 +353,11 @@ a[x-apple-data-detectors='true'] {
         <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
           <% choices = []
              petname = "" %>
-            <% @pet.pet_categories.each do |pet_category| %>
+          <% @pets.each do |pet| %>
+            <% pet.pet_categories.each do |pet_category| %>
               <% choices << pet_category.category.name %>
               <% petname = pet_category.pet.name.capitalize %>
+          <% end %>
           <% end %>
           You're tracking
           <% choices.each do |choice| %>
@@ -371,7 +373,7 @@ a[x-apple-data-detectors='true'] {
       <span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;">
         <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
           <% plantnickname = "" %>
-            <% @plant.each do |plant| %>
+            <% @plants.each do |plant| %>
               <% plantnickname = plant.nickname.capitalize %>
           <% end %>
           You're tracking
@@ -415,11 +417,14 @@ a[x-apple-data-detectors='true'] {
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr>
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
-      <% if @pet.image.attached? %>
-        <%= cl_image_tag @pet.image.key, width: 200 %>
-      <% end %>
-      <% if @plant.image.attached? %>
-        <%= cl_image_tag @plant.image.key, width: 200 %>
+      <% if params[:pet_category] %>
+        <% if @pet.image.attached? %>
+          <%= cl_image_tag @pet.image.key, width: 200 %>
+        <% end %>
+      <% else %>
+        <% if @plant.image.attached? %>
+          <%= cl_image_tag @plant.image.key, width: 200 %>
+        <% end %>
       <% end %>
       </div>
 
@@ -459,7 +464,11 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 2px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <% if params[:pet_category] %>
     <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 18px; line-height: 25.2px;"><strong><span style="line-height: 25.2px; font-size: 18px;"><%= @pet.name %></span></strong></span></p>
+    <% else %>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 18px; line-height: 25.2px;"><strong><span style="line-height: 25.2px; font-size: 18px;"><%= @plant.nickname %></span></strong></span></p>
+    <% end %>
   </div>
 
       </td>
@@ -473,7 +482,11 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 10px 10px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <% if params[:pet_category] %>
     <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 14px; line-height: 19.6px;"><%= @pet.breed %></span></p>
+    <% else %>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 14px; line-height: 19.6px;"><%= @plant.species %></span></p>
+    <% end %>
   </div>
 
       </td>
