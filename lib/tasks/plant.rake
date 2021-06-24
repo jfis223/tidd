@@ -1,7 +1,6 @@
 require 'date'
 namespace :plant do
   desc "Send water reminders"
-
   task water_reminder: :environment do
     reminders = Plant.all
     reminders.each do |reminder|

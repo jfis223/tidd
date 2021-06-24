@@ -1,9 +1,11 @@
 # To deliver this notification:
 #
-# ReminderNotification.with(post: @post).deliver_later(current_user)
-# ReminderNotification.with(post: @post).deliver(current_user)
+# NewNotification.with(post: @post).deliver_later(current_user)
+# NewNotification.with(post: @post).deliver(current_user)
 
-class ReminderNotification < Noticed::Base
+class NewNotification < Noticed::Base
+  # Add your delivery methods
+  #
   deliver_by :database
   deliver_by :email, mailer: "UserMailer"
   # deliver_by :slack
@@ -16,11 +18,11 @@ class ReminderNotification < Noticed::Base
   # Define helper methods to make rendering easier.
   #
   def message
-    "You have a new reminder!"
+    "You have a new notification!"
   end
-
+  #
   def url
-    pet_category = PetCategory.find(params[:pet_category])
-    pet_path(pet_category.pet)
+    plant = Plant.find(params[:pet_category])
+    plant_path(plant.pet)
   end
 end
