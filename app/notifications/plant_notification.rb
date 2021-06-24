@@ -1,9 +1,9 @@
 # To deliver this notification:
 #
-# ReminderNotification.with(post: @post).deliver_later(current_user)
-# ReminderNotification.with(post: @post).deliver(current_user)
+# PlantNotification.with(post: @post).deliver_later(current_user)
+# PlantNotification.with(post: @post).deliver(current_user)
 
-class ReminderNotification < Noticed::Base
+class PlantNotification < Noticed::Base
   deliver_by :database
   deliver_by :email, mailer: "UserMailer"
   # deliver_by :slack
@@ -18,9 +18,9 @@ class ReminderNotification < Noticed::Base
   def message
     "You have a new reminder!"
   end
-
+  #
   def url
-    pet_category = PetCategory.find(params[:pet_category])
-    pet_path(pet_category.pet)
+    plant = Plant.find(params[:plant])
+    plant_path(plant)
   end
 end
