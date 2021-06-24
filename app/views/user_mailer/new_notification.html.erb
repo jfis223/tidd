@@ -172,7 +172,8 @@ a[x-apple-data-detectors='true'] {
               <tr>
                 <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
 
-                  <img align="center" border="0" src="<%= cl_image_path('mcr6ljt2bd9uinpftvmn770l1wvw') %>" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 41%;max-width: 114.8px;" width="114.8"/>
+                <img align="left" border="0" src="https://res.cloudinary.com/dhjlcgujb/image/upload/v1624539729/Logo_jv2nvx.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 41%;max-width: 114.8px;" width="114.8"/>
+
 
                 </td>
               </tr>
@@ -198,7 +199,7 @@ a[x-apple-data-detectors='true'] {
             <td style="overflow-wrap:break-word;word-break:break-word;padding:25px 10px 10px;font-family:'Open Sans',sans-serif;" align="left">
 
         <div class="v-text-align" style="line-height: 140%; text-align: center; word-wrap: break-word;">
-          <p style="font-size: 14px; line-height: 140%; text-align: center;"><em><span style="color: #aaaaaa; font-size: 16px; line-height: 22.4px;"><strong><span style="line-height: 22.4px; font-size: 16px;"><span style="color: #34495e; font-size: 16px; line-height: 22.4px;"><%= Date.today %></span></span></strong></span></em></p>
+          <p style="font-size: 14px; line-height: 140%; text-align: center;"><em><span style="color: #aaaaaa; font-size: 16px; line-height: 22.4px;"><strong><span style="line-height: 22.4px; font-size: 16px;"><span style="color: #aaaaaa; font-size: 16px; line-height: 22.4px;"><%= Date.today %></span></span></strong></span></em></p>
         </div>
 
             </td>
@@ -293,7 +294,7 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:50px 10px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 34px; line-height: 47.6px; color: #ffffff;"><strong><span style="line-height: 47.6px; font-family: Raleway, sans-serif; font-size: 34px;">Hello <%= @user.name %> </span></strong></span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 34px; line-height: 47.6px; color: #ffffff;"><strong><span style="line-height: 47.6px; font-family: Raleway, sans-serif; font-size: 34px;">Hello, <%= @user.name.capitalize %>!</span></strong></span></p>
   </div>
 
       </td>
@@ -365,11 +366,12 @@ a[x-apple-data-detectors='true'] {
               <% plantnickname = plant.nickname.capitalize %>
           <% end %>
           You're tracking
-          <%= plantnickname %>
           <% choices.each do |choice| %>
             <%= choice %>,
           <% end %> for <%= petname %>
         </span>
+        <img align="center" border="0" src="https://media.giphy.com/media/MJ4Qi9dSACpLG/giphy.gif" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 41%;max-width: 114.8px;" width="114.8"/>
+
     </span>
     </p>
   </div>
@@ -563,7 +565,7 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 33px 15px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 16px; line-height: 22.4px; font-family: Cabin, sans-serif;">Your pet needs you, don't forget to open your reminders</span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 16px; line-height: 22.4px; font-family: Cabin, sans-serif;">Don't forget to open your reminders when you get them!</span></p>
   </div>
 
       </td>
@@ -626,7 +628,7 @@ a[x-apple-data-detectors='true'] {
         <tbody>
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:23px 60px 20px;font-family:'Open Sans',sans-serif;" align="left">
-              <img align="left" border="0" src="<%= cl_image_path('Logo_lnqpif') %>" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 41%;max-width: 114.8px;" width="114.8"/>
+              <img align="left" border="0" src="https://res.cloudinary.com/dhjlcgujb/image/upload/v1624539729/Logo_jv2nvx.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 41%;max-width: 114.8px;" width="114.8"/>
             </td>
           </tr>
         </tbody>
@@ -637,8 +639,8 @@ a[x-apple-data-detectors='true'] {
   </div>
 </div>
     <div class="v-text-align-right" style="line-height: 160%; text-align: right; word-wrap: break-word;">
-        <p style="font-size: 14px; padding:23px 60px 20px; line-height: 160%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 22.4px;"><strong><span style="line-height: 22.4px; color: #ffffff; font-size: 14px;"><a href="#"><%= link_to 'About us', about_us_url %></a></span></strong></span></p>
-        <p style="font-size: 14px; line-height: 160%; padding:23px 60px 20px"><span style="font-size: 14px; line-height: 22.4px; font-family: 'Open Sans', sans-serif; color: #ffffff;"><%= link_to 'Go back to the website', root_url %></span></p>
+        <p style="font-size: 14px; padding:23px 60px 20px; line-height: 160%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 22.4px;"><strong><span style="line-height: 22.4px; color: #ffffff; font-size: 14px;"><a href="https://www.doomdodger.me/about_us">About us</a></span></strong></span></p>
+        <p style="font-size: 14px; line-height: 160%; padding:23px 60px 20px"><span style="font-size: 14px; line-height: 22.4px; font-family: 'Open Sans', sans-serif; color: #ffffff;"><a href="https://www.doomdodger.me/">Visit our website</a></span></p>
       </div>
     </div>
     <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;">
