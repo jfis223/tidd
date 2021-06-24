@@ -3,7 +3,7 @@ class Plant < ApplicationRecord
   after_create :send_notification
 
   def send_notification
-    notification = NewNotificationPlant.with(plant: self.id)
+    notification = NewNotification.with(plant: self.id)
     notification.deliver(self.plant.user)
   end
 
@@ -18,7 +18,7 @@ class Plant < ApplicationRecord
   def self.water_reminder
     reminders = Plant.all
     reminders.each do |reminder|
-      notification = ReminderNotification.with(plant: reminder.id)
+      notification = PlantNotification.with(plant: reminder.id)
       notification.deliver(reminder.plant.user)
     end
   end
