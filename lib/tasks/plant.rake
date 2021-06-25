@@ -5,7 +5,7 @@ namespace :plant do
     reminders = Plant.all
     reminders.each do |reminder|
       notification = PlantNotification.with(plant: reminder.id)
-      notification.deliver(reminder.plant.user)
+      notification.deliver(reminder.user)
     end
   end
 end
