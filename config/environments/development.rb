@@ -30,12 +30,12 @@ Rails.application.configure do
   end
 
   # config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.delivery_method = :sendgrid_actionmailer
-  config.action_mailer.sendgrid_actionmailer_settings = {
-  api_key: ENV['SENDGRID_API_KEY'],
-  mail_settings: { sandbox_mode: { enable: true }},
-  raise_delivery_errors: true
-}
+  config.action_mailer.delivery_method = :letter_opener
+#   config.action_mailer.sendgrid_actionmailer_settings = {
+#   api_key: ENV['SENDGRID_API_KEY'],
+#   mail_settings: { sandbox_mode: { enable: true }},
+#   raise_delivery_errors: true
+# }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary

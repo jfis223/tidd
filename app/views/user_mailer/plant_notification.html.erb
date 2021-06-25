@@ -358,10 +358,10 @@ a[x-apple-data-detectors='true'] {
         <span style="font-size: 22px; line-height: 30.8px; color: #000000;">
           <% choices = []
              nickname = "" %>
-            <% @plant.each do |plant| %>
+            <% @plants.each do |plant| %>
               <% plantnickname = plant.nickname.capitalize %>
+              Don't forget to water <%= plant.nickname %>
           <% end %>
-          Don't forget to water <%= plantnickname %>
         </span>
     </span>
     </p>
@@ -444,7 +444,7 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 2px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 18px; line-height: 25.2px;"><strong><span style="line-height: 25.2px; font-size: 18px;"><%= @pet.name %></span></strong></span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 18px; line-height: 25.2px;"><strong><span style="line-height: 25.2px; font-size: 18px;"><%= @plant.nickname %></span></strong></span></p>
   </div>
 
       </td>
@@ -458,7 +458,7 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 10px 10px;font-family:'Open Sans',sans-serif;" align="left">
 
   <div class="v-text-align" style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 14px; line-height: 19.6px;"><%= @pet.breed %></span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: center;"><span style="font-size: 14px; line-height: 19.6px;"><%= @plant.species %></span></p>
   </div>
 
       </td>
