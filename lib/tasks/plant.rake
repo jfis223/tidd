@@ -6,6 +6,7 @@ namespace :plant do
     reminders.each do |reminder|
       notification = PlantNotification.with(plant: reminder.id)
       notification.deliver(reminder.user)
+      p notification
     end
   end
 end

@@ -31,9 +31,10 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'New reminder set !')
   end
 
-  def reminder_plant
-    @plant = Plant.find(params[:plant_category])
+  def plant_notification
+    @plant = Plant.find(params[:plant])
     @user = @plant.user
+    @plants = @user.plants
     # @user.pet = @pet
     mail(to: @user.email, subject: 'New reminder set !')
   end
