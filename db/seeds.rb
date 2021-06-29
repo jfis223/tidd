@@ -15,7 +15,7 @@ Pet.delete_all
 Plant.delete_all
 User.delete_all
 
-user = User.create!(name: 'julian', email: 'juliandemeuse@gmail.com', password: 'password')
+user = User.create!(name: 'julian', email: 'julian@gmail.com', password: 'password')
 user_avatar = open('https://cdn.vox-cdn.com/uploads/chorus_asset/file/17588772/1031085.jpg')
 user.avatar.attach(io: user_avatar, filename: 'image.jpg')
 
